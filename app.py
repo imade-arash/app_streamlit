@@ -5,8 +5,9 @@ import pickle
 
 
 # Charger le modèle
-model = pickle.load(open("app_ Streamlit/RF_churn_model.pkl", "rb"))
-
+with open("RF_churn_model.pkl", "rb") as file:
+    model = pickle.load(file)
+    
 st.title("Prédiction du Churn Client 📊")
 
 st.write("Veuillez remplir les informations ci-dessous pour prédire le churn :")
